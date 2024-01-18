@@ -62,8 +62,12 @@ func (tree *RBTree[K, V]) InsertMem(e *Entry[K, V]) error {
 	tree.mu.Lock()
 	defer tree.mu.Unlock()
 
-	if e.Size() != int(tree.meta.nodeKeySize + tree.meta.nodeValSize) {
-		return errors.Wrap(ErrInvalidKeySize, "insert entry size missmatch")
+	eSize := e.Size()
+	if eSize != int(tree.meta.nodeKeySize + tree.meta.nodeValSize) {
+		return errors.Wrapf(
+			ErrInvalidKeySize, "insert entry size missmatch, required:'%v', got:'%v'",
+			tree.meta.nodeKeySize + tree.meta.nodeValSize, eSize,
+		)
 	}
 
 	if _, err := tree.get(e.Key); err != nil && err != ErrNotFound {
@@ -87,8 +91,12 @@ func (tree *RBTree[K, V]) InsertMem(e *Entry[K, V]) error {
 
 func (tree *RBTree[K, V]) Get(key K) (*Entry[K, V], error) {
 	var e *Entry[K, V]
-	if key.Size() != int(tree.meta.nodeKeySize) {
-		return e, errors.Wrap(ErrInvalidKeySize, "insert entry size missmatch")
+	kSize := key.Size()
+	if kSize != int(tree.meta.nodeKeySize) {
+		return e, errors.Wrapf(
+			ErrInvalidKeySize, "key size missmatch, required:'%v', got:'%v'",
+			tree.meta.nodeKeySize, kSize,
+		)
 	}
 
 	tree.mu.RLock()
@@ -114,8 +122,12 @@ func (tree *RBTree[K, V]) DeleteMem(key K) error {
 	tree.mu.Lock()
 	defer tree.mu.Unlock()
 
-	if key.Size() != int(tree.meta.nodeKeySize) {
-		return errors.Wrap(ErrInvalidKeySize, "delete entry size missmatch")
+	kSize := key.Size()
+	if kSize != int(tree.meta.nodeKeySize) {
+		return errors.Wrapf(
+			ErrInvalidKeySize, "delete entry size missmatch, required:'%v', got:'%v'",
+			tree.meta.nodeKeySize, kSize,
+		)
 	}
 
 	ptr, err := tree.get(key)
