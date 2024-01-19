@@ -9,7 +9,7 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/vahagz/pager"
-	"github.com/vahagz/rbtree/stack"
+	"github.com/vahagz/rbtree/pkg/stack"
 )
 
 var bin = binary.BigEndian
