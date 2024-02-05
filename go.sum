@@ -8,8 +8,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcUk=
 github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
-github.com/vahagz/pager v0.0.2-0.20240124141821-d9a252b6212b h1:lWKnLH6JUoAP6biMhJRiIjK2yZK/9C6qZU1BIvt3DxE=
-github.com/vahagz/pager v0.0.2-0.20240124141821-d9a252b6212b/go.mod h1:46G/eN1+gw4I5FgyY2sIFDgAJuQvwNADs49wTKqfyOk=
+github.com/vahagz/pager v0.0.2-0.20240129094313-d2b541b095ee h1:EDUZbxLxCq9JaPmfg5ilvhl6g92nq2jI6EYPD4HnfGc=
+github.com/vahagz/pager v0.0.2-0.20240129094313-d2b541b095ee/go.mod h1:vgo8Osl+QDlL5Ond4RzWHiKPHCo1QAWtj3/gLKMTNrI=
 golang.org/x/sys v0.16.0 h1:xWw16ngr6ZMtmxDyKyIgsE93KNKz5HKmMa3b8ALHidU=
 golang.org/x/sys v0.16.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
