@@ -16,7 +16,7 @@ var bin = binary.BigEndian
 
 func Open[K, V EntryItem](fileName string, opts *Options) (*RBTree[K, V], error) {
 	pagerFile := fmt.Sprintf("%s.idx", fileName)
-	p, err := pager.Open(pagerFile, int(opts.PageSize), false, 0664)
+	p, err := pager.Open(pagerFile, int(opts.PageSize), 0664)
 	if err != nil {
 		return nil, errors.Wrap(err, "failed to Open rbtree")
 	}
