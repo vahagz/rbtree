@@ -5,7 +5,7 @@ go 1.22
 require (
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.8.4
-	github.com/vahagz/pager v0.0.2-0.20240216111856-92b66f0b6de0
+	github.com/vahagz/pager v0.0.2-0.20240320134257-ef6bfabceb56
 )
 
 require (
